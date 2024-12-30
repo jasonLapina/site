@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Box,
   Button,
   Container,
@@ -62,7 +61,7 @@ const ImageBox = () => {
         <Stack sx={{ textAlign: "center", mt: 3 }} useFlexGap rowGap={1}>
           <Typography variant="h5"> Jason Lapina </Typography>
           <Typography variant="h6"> Web Developer </Typography>
-          <Typography variant="subtitle">
+          <Typography variant="subtitle1">
             "I do what I do for the love of it"
           </Typography>
         </Stack>
