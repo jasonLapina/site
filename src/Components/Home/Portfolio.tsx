@@ -1,5 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 
+const dummy = Array.from({ length: 6 });
+
 const Portfolio = () => {
   return (
     <Container>
@@ -13,7 +15,33 @@ const Portfolio = () => {
           delivering seamless experiences that are always fun and effective.
         </Typography>
       </Box>
-      <Box display="grid" gridTemplateColumns="1fr 1fr"></Box>
+      <Box
+        display="grid"
+        gridTemplateColumns="1fr 1fr"
+        mt={6}
+        columnGap={3}
+        rowGap={6}
+      >
+        {dummy.map((item, i) => {
+          return (
+            <Box key={i}>
+              <Box
+                component="img"
+                src={
+                  "https://cdn.prod.website-files.com/63c96fbd3f3abb1db1cbcab9/6511becc5d4ae9d9c135d5c8_Sims%204%20Thumbnail-p-800.png"
+                }
+                width="100%"
+                borderRadius="20px"
+                boxShadow="2px 2px 2px red"
+                mb={1}
+              />
+
+              <Typography variant="h6">Customer UX & Game UI</Typography>
+              <Typography variant="h4">Sims 4 Fan UI Redesign</Typography>
+            </Box>
+          );
+        })}
+      </Box>
     </Container>
   );
 };
