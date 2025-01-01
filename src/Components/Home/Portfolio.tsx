@@ -4,7 +4,7 @@ const dummy = Array.from({ length: 6 });
 
 const Portfolio = () => {
   return (
-    <Container>
+    <Container maxWidth="xl">
       <Box width="50%">
         <Typography variant="h2">PORTFOLIO</Typography>
         <Typography variant="h4" mt={4}>

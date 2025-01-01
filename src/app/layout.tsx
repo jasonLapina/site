@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Box } from "@mui/material";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Box component="main" py={15}>
-          {children}
-        </Box>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

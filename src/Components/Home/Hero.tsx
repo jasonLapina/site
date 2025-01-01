@@ -17,7 +17,9 @@ const Hero = () => {
         gridTemplateColumns: "1fr .6fr",
         columnGap: 10,
         alignItems: "center",
+        height: "90vh",
       }}
+      maxWidth="xl"
     >
       <TextBox />
       <ImageBox />
@@ -62,7 +64,7 @@ const ImageBox = () => {
           <Typography variant="h5"> Jason Lapina </Typography>
           <Typography variant="h6"> Web Developer </Typography>
           <Typography variant="subtitle1">
-            "I do what I do for the love of it"
+            &quot;I do what I do for the love of it&quot;
           </Typography>
         </Stack>
       </Stack>
