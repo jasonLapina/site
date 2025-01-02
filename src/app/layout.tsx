@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Box } from "@mui/material";
+import Footer from "@/Components/Footer";
+import Navbar from "@/Components/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider>
-          <Box pb={10}>{children}</Box>
+          <Box pb={10}>
+            <Navbar />
+            {children}
+            <Footer />
+          </Box>
         </AppRouterCacheProvider>
       </body>
     </html>
