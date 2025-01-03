@@ -33,9 +33,7 @@ const Footer = () => {
           <Typography>- Prince, The Beautiful Ones</Typography>
         </Box>
         <Box sx={{ backgroundColor: "red", borderRadius: "20px", p: 5 }}>
-          <Typography>
-            Jason Alexander Lapina. Developer. Problem Solver
-          </Typography>
+          <Typography>Jason Lapina | Problem Solver</Typography>
         </Box>
       </Stack>
     </Container>

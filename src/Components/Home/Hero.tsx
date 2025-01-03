@@ -19,7 +19,6 @@ const Hero = () => {
         alignItems: "center",
         height: "90vh",
       }}
-      maxWidth="xl"
     >
       <TextBox />
       <ImageBox />
