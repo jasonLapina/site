@@ -16,7 +16,7 @@ export default function About() {
         <Avatar sx={{ height: "120px", width: "120px" }}>JL</Avatar>
 
         <Box px={8} textAlign="center">
-          <Typography variant="h3">Hi, I'm Jason! :)</Typography>
+          <Typography variant="h3">Hi, I&apos;m Jason! :)</Typography>
           <Typography variant="h5" mt={2}>
             A product designer with 6+ YOE building products across Fintech,
             Social Media, Healthcare, AI and Aviation. Expert in design systems

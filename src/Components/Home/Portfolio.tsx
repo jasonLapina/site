@@ -31,7 +31,7 @@ const Portfolio = () => {
                   "https://cdn.prod.website-files.com/63c96fbd3f3abb1db1cbcab9/6511becc5d4ae9d9c135d5c8_Sims%204%20Thumbnail-p-800.png"
                 }
                 sx={{
-                  outline: "double red",
+
                   width: "100%",
                   borderRadius: "20px",
                   mb: 1,
