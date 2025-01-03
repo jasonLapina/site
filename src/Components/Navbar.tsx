@@ -1,17 +1,18 @@
-import { Avatar, Button, Container, Stack } from "@mui/material";
+import { Avatar, Button, Container, Link, Stack } from "@mui/material";
+import NextLink from "next/link";
 
 const navItems = [
   {
-    text: "Nav",
-    link: "",
+    text: "Portfolio",
+    link: "/",
   },
   {
     text: "About Me",
     link: "/about",
   },
   {
-    text: "Anv",
-    link: "",
+    text: "Blog",
+    link: "/blog",
   },
 ];
 
@@ -27,10 +28,18 @@ const Navbar = () => {
       }}
     >
       <Stack flexDirection="row" justifyContent="space-between">
-        <Avatar>JL</Avatar>
+        <Link component={NextLink} href="/">
+          <Avatar>JL</Avatar>
+        </Link>
+
         <Stack flexDirection="row" useFlexGap columnGap={2}>
           {navItems.map((nav) => (
-            <Button key={nav.text} variant="contained">
+            <Button
+              variant={"contained"}
+              key={nav.text}
+              href={nav.link}
+              component={NextLink}
+            >
               {nav.text}
             </Button>
           ))}
