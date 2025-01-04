@@ -29,6 +29,7 @@ const Navbar = () => {
         top: "1rem",
         left: "50%",
         transform: "translateX(-50%)",
+        zIndex: 99,
       }}
     >
       <Stack
