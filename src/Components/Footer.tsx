@@ -35,8 +35,15 @@ const Footer = () => {
           flexDirection="row"
           alignItems="center"
         >
-          <Button variant="contained" endIcon={<LinkedIn />}>
-            LinkedIn
+          <Button
+            variant="contained"
+            endIcon={<LinkedIn />}
+            href="https://www.linkedin.com/in/dev-jason/"
+            target="_blank"
+            rel="noreferrer noopener"
+            component="a"
+          >
+            Let&apos;s Connect
           </Button>
           <Button variant="contained" endIcon={<Email />}>
             Email

@@ -10,6 +10,7 @@ const theme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
+        root: { textTransform: "none" },
         contained: generateButtonStyles(),
         outlined: generateButtonStyles(),
       },

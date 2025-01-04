@@ -40,7 +40,15 @@ const TextBox = () => {
           <Link href="https://www.lemongrasscloud.com/">Lemongrass Cloud</Link>
         </Typography>
       </Stack>
-      <Button sx={{ mt: 5 }} variant="contained" endIcon={<LinkedIn />}>
+      <Button
+        component="a"
+        sx={{ mt: 5 }}
+        variant="contained"
+        endIcon={<LinkedIn />}
+        href="https://www.linkedin.com/in/dev-jason/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         Let&apos;s Connect
       </Button>
     </Box>

@@ -70,6 +70,10 @@ const Navbar = () => {
               borderWidth: 3,
             }}
             endIcon={<LinkedIn />}
+            href="https://www.linkedin.com/in/dev-jason/"
+            target="_blank"
+            rel="noreferrer noopener"
+            component="a"
           >
             Connect
           </Button>
