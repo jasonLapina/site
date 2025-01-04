@@ -5,12 +5,12 @@ const dummy = Array.from({ length: 6 });
 const Portfolio = () => {
   return (
     <Container>
-      <Box width="50%">
-        <Typography variant="h2">PORTFOLIO</Typography>
+      <Box>
+        <Typography variant="h1">PORTFOLIO</Typography>
         <Typography variant="h4" mt={4}>
           Take a look at some of my work!
         </Typography>
-        <Typography mt={2}>
+        <Typography mt={2} maxWidth="400px">
           Explore experiences crafted with precision and passion, aimed at
           delivering seamless experiences that are always fun and effective.
         </Typography>
@@ -31,7 +31,6 @@ const Portfolio = () => {
                   "https://cdn.prod.website-files.com/63c96fbd3f3abb1db1cbcab9/6511becc5d4ae9d9c135d5c8_Sims%204%20Thumbnail-p-800.png"
                 }
                 sx={{
-
                   width: "100%",
                   borderRadius: "20px",
                   mb: 1,

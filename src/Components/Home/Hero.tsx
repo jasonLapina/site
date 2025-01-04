@@ -29,7 +29,7 @@ const Hero = () => {
 const TextBox = () => {
   return (
     <Box>
-      <Typography variant="h1">Hi, I&apos;m Jason!</Typography>
+      <Typography variant="h2">Hi, I&apos;m Jason!</Typography>
       <Stack useFlexGap rowGap={2} mt={3}>
         <Typography>
           I&apos;m a <strong>full-stack developer</strong> that&apos;s ready to

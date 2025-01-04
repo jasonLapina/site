@@ -14,7 +14,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    h1: generateHeadingStyles(),
+    h1: { ...generateHeadingStyles(), fontSize: "6rem" },
     h2: generateHeadingStyles(),
     h3: generateHeadingStyles(),
     h4: generateHeadingStyles(),
