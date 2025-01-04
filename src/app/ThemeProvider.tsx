@@ -14,12 +14,12 @@ const theme = createTheme({
     },
   },
   typography: {
-    h1: generateHeadingStyles("2.5rem"),
-    h2: generateHeadingStyles("2rem"),
-    h3: generateHeadingStyles("1.75rem"),
-    h4: generateHeadingStyles("1.5rem"),
-    h5: generateHeadingStyles("1.25rem"),
-    h6: generateHeadingStyles("1rem"),
+    h1: generateHeadingStyles(),
+    h2: generateHeadingStyles(),
+    h3: generateHeadingStyles(),
+    h4: generateHeadingStyles(),
+    h5: generateHeadingStyles(),
+    h6: { ...generateHeadingStyles(), fontSize: "1rem" },
   },
 });
 
@@ -31,10 +31,9 @@ export default function ThemeProvider({
   return <MuiProvider theme={theme}>{children}</MuiProvider>;
 }
 
-function generateHeadingStyles(fontSize: string) {
+function generateHeadingStyles() {
   return {
     fontWeight: "bold",
-    fontSize,
     backgroundImage:
       "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)",
     WebkitBackgroundClip: "text",
