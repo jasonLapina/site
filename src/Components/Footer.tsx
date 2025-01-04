@@ -16,7 +16,7 @@ const Footer = () => {
           borderRadius: "20px",
           py: 10,
           px: 5,
-          background: "#010101",
+          backgroundColor: "secondary.main",
           color: "white",
         }}
       >
@@ -28,7 +28,13 @@ const Footer = () => {
         >
           Let&apos;s talk!
         </Typography>
-        <Stack useFlexGap columnGap={2} mt={3} flexDirection="row">
+        <Stack
+          useFlexGap
+          columnGap={2}
+          mt={3}
+          flexDirection="row"
+          alignItems="center"
+        >
           <Button variant="contained" endIcon={<LinkedIn />}>
             LinkedIn
           </Button>
@@ -42,7 +48,7 @@ const Footer = () => {
           sx={{
             borderRadius: "20px",
             p: 5,
-            background: "#010101",
+            backgroundColor: "secondary.main",
             color: "white",
           }}
         >
@@ -53,7 +59,7 @@ const Footer = () => {
             borderRadius: "20px",
             p: 5,
             textAlign: "right",
-            background: "#010101",
+            backgroundColor: "secondary.main",
             color: "white",
           }}
         >

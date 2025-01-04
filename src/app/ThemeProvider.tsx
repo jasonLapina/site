@@ -18,13 +18,10 @@ const theme = createTheme({
   palette: {
     primary: pink,
     secondary: {
-      main: "#F8F8F8",
+      main: "#010101",
     },
   },
   typography: {
-    body1: {
-      fontSize: "1.2rem",
-    },
     h1: { ...generateHeadingStyles(), fontSize: "8rem" },
     h2: generateHeadingStyles(),
     h3: generateHeadingStyles(),

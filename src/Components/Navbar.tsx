@@ -41,7 +41,7 @@ const Navbar = () => {
           <Avatar>JL</Avatar>
         </Link>
 
-        <Stack flexDirection="row" useFlexGap columnGap={2}>
+        <Stack flexDirection="row" alignItems="center" useFlexGap columnGap={2}>
           {navItems.map((nav) => {
             const isActive = path === nav.link;
             return (
