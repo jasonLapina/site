@@ -1,6 +1,8 @@
+"use client";
 import { Avatar, Button, Container, Link, Stack } from "@mui/material";
 import NextLink from "next/link";
 import { LinkedIn } from "@mui/icons-material";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   {
@@ -18,6 +20,7 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const path = usePathname();
   return (
     <Container
       maxWidth="xl"
@@ -39,21 +42,25 @@ const Navbar = () => {
         </Link>
 
         <Stack flexDirection="row" useFlexGap columnGap={2}>
-          {navItems.map((nav) => (
-            <Button
-              variant="outlined"
-              key={nav.text}
-              href={nav.link}
-              component={NextLink}
-              sx={{
-                textTransform: "initial",
-                backgroundColor: "white",
-                borderWidth: 3,
-              }}
-            >
-              {nav.text}
-            </Button>
-          ))}
+          {navItems.map((nav) => {
+            const isActive = path === nav.link;
+            return (
+              <Button
+                variant="outlined"
+                key={nav.text}
+                href={nav.link}
+                component={NextLink}
+                sx={{
+                  textTransform: "initial",
+                  borderWidth: 3,
+                  backgroundColor: isActive ? "primary.light" : "white",
+                  color: !isActive ? "primary.light" : "white",
+                }}
+              >
+                {nav.text}
+              </Button>
+            );
+          })}
           <Button
             variant="outlined"
             sx={{
