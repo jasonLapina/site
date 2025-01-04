@@ -14,7 +14,10 @@ const theme = createTheme({
     },
   },
   typography: {
-    h1: { ...generateHeadingStyles(), fontSize: "6rem" },
+    body1: {
+      fontSize: "1.2rem",
+    },
+    h1: { ...generateHeadingStyles(), fontSize: "8rem" },
     h2: generateHeadingStyles(),
     h3: generateHeadingStyles(),
     h4: generateHeadingStyles(),
@@ -38,5 +41,6 @@ function generateHeadingStyles() {
       "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
+    fontFamily: '"Trebuchet MS", Helvetica, sans-serif',
   };
 }

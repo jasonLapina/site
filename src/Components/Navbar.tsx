@@ -39,7 +39,10 @@ const Navbar = () => {
               key={nav.text}
               href={nav.link}
               component={NextLink}
-              sx={{ textTransform: "initial" }}
+              sx={{
+                textTransform: "initial",
+                backgroundColor: "primary.light",
+              }}
             >
               {nav.text}
             </Button>

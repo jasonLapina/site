@@ -17,7 +17,7 @@ const Hero = () => {
         gridTemplateColumns: "1fr .6fr",
         columnGap: 10,
         alignItems: "center",
-        height: "90vh",
+        height: "100vh",
       }}
     >
       <TextBox />
