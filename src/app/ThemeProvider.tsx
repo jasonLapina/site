@@ -7,6 +7,14 @@ import {
 import { pink } from "@mui/material/colors";
 
 const theme = createTheme({
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        contained: generateButtonStyles(),
+        outlined: generateButtonStyles(),
+      },
+    },
+  },
   palette: {
     primary: pink,
     secondary: {
@@ -25,7 +33,6 @@ const theme = createTheme({
     h6: { ...generateHeadingStyles(), fontSize: "1rem" },
   },
 });
-
 export default function ThemeProvider({
   children,
 }: {
@@ -42,5 +49,14 @@ function generateHeadingStyles() {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     fontFamily: '"Trebuchet MS", Helvetica, sans-serif',
+  };
+}
+
+function generateButtonStyles() {
+  return {
+    padding: "12px 24px",
+    borderRadius: "8px",
+    fontWeight: "bold",
+    fontSize: "1rem",
   };
 }
