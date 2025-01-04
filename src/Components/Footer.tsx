@@ -1,4 +1,11 @@
-import { Button, Container, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { Email, LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
@@ -9,10 +16,17 @@ const Footer = () => {
           borderRadius: "20px",
           py: 10,
           px: 5,
+          background: "#010101",
+          color: "white",
         }}
       >
-        <Typography fontSize="6rem" fontWeight="bold" fontStyle="italic">
-          LET&apos;S TALK!
+        <Typography
+          variant="h2"
+          fontSize="6rem"
+          fontWeight="bold"
+          fontStyle="italic"
+        >
+          Let&apos;s talk!
         </Typography>
         <Stack useFlexGap columnGap={2} mt={3} flexDirection="row">
           <Button variant="contained" endIcon={<LinkedIn />}>
@@ -23,23 +37,35 @@ const Footer = () => {
           </Button>
         </Stack>
       </Paper>
-      <Stack
-        flexDirection="row"
-        mt={4}
-        columnGap={4}
-        justifyContent="space-between"
-      >
-        <Paper sx={{ borderRadius: "20px", p: 5 }}>
-          <Typography>
-            “Try to create. I want to tell people to create. Just start by
-            creating your day. Then create your life.”
+      <Box mt={4} display="grid" gridTemplateColumns=".6fr 1fr" columnGap={5}>
+        <Paper
+          sx={{
+            borderRadius: "20px",
+            p: 5,
+            background: "#010101",
+            color: "white",
+          }}
+        >
+          <Typography>Made in Next.js | 2025</Typography>
+        </Paper>
+        <Paper
+          sx={{
+            borderRadius: "20px",
+            p: 5,
+            textAlign: "right",
+            background: "#010101",
+            color: "white",
+          }}
+        >
+          <Typography variant="subtitle1">
+            &quot;Knowing is not enough; we must apply. Willing is not enough;
+            we must do.&quot;
           </Typography>
-          <Typography>- Prince, The Beautiful Ones</Typography>
+          <Typography variant="h6" fontSize=".8rem">
+            - Johann Wolfgang von Goethe
+          </Typography>
         </Paper>
-        <Paper sx={{ borderRadius: "20px", p: 5 }}>
-          <Typography>Jason Lapina | Problem Solver</Typography>
-        </Paper>
-      </Stack>
+      </Box>
     </Container>
   );
 };
