@@ -1,12 +1,11 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { Button, Container, Paper, Stack, Typography } from "@mui/material";
 import { Email, LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
   return (
     <Container sx={{ mt: 10 }}>
-      <Box
+      <Paper
         sx={{
-          backgroundColor: "purple",
           borderRadius: "20px",
           py: 10,
           px: 5,
@@ -23,18 +22,23 @@ const Footer = () => {
             Email
           </Button>
         </Stack>
-      </Box>
-      <Stack flexDirection="row" mt={4} columnGap={4}>
-        <Box sx={{ backgroundColor: "purple", borderRadius: "20px", p: 5 }}>
+      </Paper>
+      <Stack
+        flexDirection="row"
+        mt={4}
+        columnGap={4}
+        justifyContent="space-between"
+      >
+        <Paper sx={{ borderRadius: "20px", p: 5 }}>
           <Typography>
             “Try to create. I want to tell people to create. Just start by
             creating your day. Then create your life.”
           </Typography>
           <Typography>- Prince, The Beautiful Ones</Typography>
-        </Box>
-        <Box sx={{ backgroundColor: "red", borderRadius: "20px", p: 5 }}>
+        </Paper>
+        <Paper sx={{ borderRadius: "20px", p: 5 }}>
           <Typography>Jason Lapina | Problem Solver</Typography>
-        </Box>
+        </Paper>
       </Stack>
     </Container>
   );

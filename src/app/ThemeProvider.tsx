@@ -4,14 +4,22 @@ import {
   createTheme,
   ThemeProvider as MuiProvider,
 } from "@mui/material/styles";
-import { purple } from "@mui/material/colors";
+import { pink } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
-    primary: {
-      main: "#ee7d8f",
+    primary: pink,
+    secondary: {
+      main: "#F8F8F8",
     },
-    secondary: purple,
+  },
+  typography: {
+    h1: generateHeadingStyles("2.5rem"),
+    h2: generateHeadingStyles("2rem"),
+    h3: generateHeadingStyles("1.75rem"),
+    h4: generateHeadingStyles("1.5rem"),
+    h5: generateHeadingStyles("1.25rem"),
+    h6: generateHeadingStyles("1rem"),
   },
 });
 
@@ -21,4 +29,15 @@ export default function ThemeProvider({
   children: React.ReactNode;
 }) {
   return <MuiProvider theme={theme}>{children}</MuiProvider>;
+}
+
+function generateHeadingStyles(fontSize: string) {
+  return {
+    fontWeight: "bold",
+    fontSize,
+    backgroundImage:
+      "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  };
 }
