@@ -66,7 +66,8 @@ const Navbar = () => {
                 sx={{
                   textTransform: "initial",
                   borderWidth: 3,
-                  backgroundColor: isActive ? "primary.main" : "white",
+                  borderColor: "primary.light",
+                  backgroundColor: isActive ? "primary.light" : "white",
                   color: !isActive ? "primary.light" : "white",
                 }}
               >
