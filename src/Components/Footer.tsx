@@ -71,7 +71,12 @@ const Footer = () => {
             color: "white",
           }}
         >
-          <Stack flexDirection="row" alignItems="center" useFlexGap colgap={2}>
+          <Stack
+            flexDirection="row"
+            alignItems="center"
+            useFlexGap
+            columnGap={2}
+          >
             <Box component="img" src="/logo.png" sx={{ width: "80px" }} />
             <Typography>Made in Next.js | 2025</Typography>
           </Stack>
