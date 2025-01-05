@@ -18,6 +18,8 @@ const Footer = () => {
           px: 5,
           backgroundColor: "secondary.main",
           color: "white",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
         <Typography
@@ -49,6 +51,16 @@ const Footer = () => {
             Email
           </Button>
         </Stack>
+
+        <Box
+          component="img"
+          src="/calling.svg"
+          sx={{
+            position: "absolute",
+            top: "0",
+            right: "-320px",
+          }}
+        />
       </Paper>
       <Box mt={4} display="grid" gridTemplateColumns=".6fr 1fr" columnGap={5}>
         <Paper
@@ -59,7 +71,10 @@ const Footer = () => {
             color: "white",
           }}
         >
-          <Typography>Made in Next.js | 2025</Typography>
+          <Stack flexDirection="row" alignItems="center" useFlexGap colgap={2}>
+            <Box component="img" src="/logo.png" sx={{ width: "80px" }} />
+            <Typography>Made in Next.js | 2025</Typography>
+          </Stack>
         </Paper>
         <Paper
           sx={{
@@ -74,6 +89,7 @@ const Footer = () => {
             &quot;Knowing is not enough; we must apply. Willing is not enough;
             we must do.&quot;
           </Typography>
+
           <Typography variant="h6" fontSize=".8rem">
             - Johann Wolfgang von Goethe
           </Typography>

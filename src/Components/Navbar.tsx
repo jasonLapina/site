@@ -26,7 +26,7 @@ const Navbar = () => {
       maxWidth="xl"
       sx={{
         position: "fixed",
-        top: "24px",
+        top: "0",
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 99,
@@ -39,7 +39,17 @@ const Navbar = () => {
         alignItems="center"
       >
         <Link component={NextLink} href="/">
-          <Avatar src={"/logo.png"} sx={{ width: "60px", height: "60px" }}>
+          <Avatar
+            src={"/logo.png"}
+            sx={{
+              width: "120px",
+              height: "120px",
+              transition: "all .3s",
+              " &:hover": {
+                filter: "drop-shadow(0 0 2mm crimson)",
+              },
+            }}
+          >
             JL
           </Avatar>
         </Link>
