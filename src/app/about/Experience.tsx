@@ -8,33 +8,6 @@ import {
 } from "@mui/material";
 import { ExpandMoreRounded } from "@mui/icons-material";
 
-const workHistory = [
-  {
-    position: "Junior Frontend Developer",
-    company: "Taktyl Studios",
-    date: "2022 - 2023",
-    description: "I work on the UI of the game Sims 4",
-  },
-  {
-    position: "Web Developer",
-    company: "Blink Creative Studio",
-    date: "2023 - 2024",
-    description: "I work on the UI of the game Sims 4",
-  },
-  {
-    position: "Web Developer",
-    company: "Freelance",
-    date: "2023 - Present",
-    description: "I work on the UI of the game Sims 4",
-  },
-  {
-    position: "UI Developer",
-    company: "Lemongrass Cloud",
-    date: "2024 - Present",
-    description: "I work on the UI of the game Sims 4",
-  },
-];
-
 export default function Experience() {
   return (
     <Paper sx={{ px: 4, py: 8 }}>
@@ -86,7 +59,7 @@ export default function Experience() {
                 </Stack>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>{description}</Typography>
+                <Typography variant="body2">{description}</Typography>
               </AccordionDetails>
             </Accordion>
           );
@@ -95,3 +68,34 @@ export default function Experience() {
     </Paper>
   );
 }
+
+const workHistory = [
+  {
+    position: "Junior Frontend Developer",
+    company: "Taktyl Studios",
+    date: "2022 - 2023",
+    description:
+      "My first developer job was with a company led by the president of the Game Developers Association of the Philippines (GDAP). I primarily worked on gamified web applications, including a marketplace for 3D assets. My most significant contribution was coding the entire UI for their portal to HTML5 games.",
+  },
+  {
+    position: "Web Developer",
+    company: "Freelance",
+    date: "2023 - Present",
+    description:
+      "Developed a website for a small-scale home business, enabling users to browse and order trendy shoes seamlessly.",
+  },
+  {
+    position: "Web Developer",
+    company: "Blink Creative Studio",
+    date: "2023 - 2024",
+    description:
+      "Led the technical development of the business as the sole developer, managing end-to-end solutions. I handled UI design, built a content management system, and managed AWS deployments. My most notable achievement was developing a 3D web app for Jollibee Foods Corporation (JFC), showcasing their 40-year journey in celebration of their 40th anniversary.",
+  },
+  {
+    position: "UI Developer",
+    company: "Lemongrass Cloud",
+    date: "2024 - Present",
+    description:
+      "Currently working as a UI Developer at Lemongrass Cloud, a company specializing in SAP cloud services for enterprise-level businesses. In this role, I have resolved numerous bugs, implemented new features, and contributed to enhancing the application’s functionality. It's a highly technical position where we leverage cutting-edge approaches like Micro-Frontend Architectures (MFEs) to deliver scalable and modern solutions.",
+  },
+];

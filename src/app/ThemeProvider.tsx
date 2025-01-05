@@ -23,6 +23,9 @@ const theme = createTheme({
     },
   },
   typography: {
+    body2: {
+      opacity: 0.7,
+    },
     h1: { ...generateHeadingStyles(), fontSize: "8rem" },
     h2: generateHeadingStyles(),
     h3: generateHeadingStyles(),
