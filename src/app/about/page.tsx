@@ -6,14 +6,33 @@ export default function About() {
   return (
     <Container>
       <Stack
-        sx={{ height: "60vh" }}
         alignItems="center"
         justifyContent="center"
         useFlexGap
         rowGap={4}
         mt={10}
+        py={10}
       >
-        <Avatar sx={{ height: "120px", width: "120px" }}>JL</Avatar>
+        <Box
+          sx={{
+            display: "inline-block",
+            borderRadius: "50%",
+            p: "4px",
+            background:
+              "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)",
+          }}
+        >
+          <Avatar
+            src={"/me-1.jpg"}
+            sx={{
+              height: "240px",
+              width: "240px",
+              bgcolor: "white",
+            }}
+          >
+            JL
+          </Avatar>
+        </Box>
 
         <Box px={8} textAlign="center">
           <Typography variant="h3">Hi, I&apos;m Jason! :)</Typography>

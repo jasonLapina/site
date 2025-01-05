@@ -26,7 +26,7 @@ const Navbar = () => {
       maxWidth="xl"
       sx={{
         position: "fixed",
-        top: "1rem",
+        top: "24px",
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 99,
@@ -39,7 +39,9 @@ const Navbar = () => {
         alignItems="center"
       >
         <Link component={NextLink} href="/">
-          <Avatar>JL</Avatar>
+          <Avatar src={"/logo.png"} sx={{ width: "60px", height: "60px" }}>
+            JL
+          </Avatar>
         </Link>
 
         <Stack flexDirection="row" alignItems="center" useFlexGap columnGap={2}>
