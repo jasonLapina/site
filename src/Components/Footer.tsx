@@ -95,7 +95,7 @@ const Footer = () => {
             we must do.&quot;
           </Typography>
 
-          <Typography variant="h6" fontSize=".8rem">
+          <Typography variant="h6" fontSize="1.2rem">
             - Johann Wolfgang von Goethe
           </Typography>
         </Paper>
