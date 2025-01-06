@@ -47,7 +47,12 @@ const Footer = () => {
           >
             Let&apos;s Connect
           </Button>
-          <Button variant="contained" endIcon={<Email />}>
+          <Button
+            variant="contained"
+            endIcon={<Email />}
+            href="mailto:lapina.jason@gmail.com"
+            component="a"
+          >
             Email
           </Button>
         </Stack>
