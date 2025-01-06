@@ -42,8 +42,8 @@ const Navbar = () => {
           <Avatar
             src={"/logo.png"}
             sx={{
-              width: "120px",
-              height: "120px",
+              width: "100px",
+              height: "100px",
               transition: "all .3s",
               " &:hover": {
                 filter: "drop-shadow(0 0 2mm crimson)",
