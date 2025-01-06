@@ -1,6 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
-
-const dummy = Array.from({ length: 6 });
+import { Box, Container, Paper, Typography } from "@mui/material";
 
 const Portfolio = () => {
   return (
@@ -22,33 +20,41 @@ const Portfolio = () => {
         columnGap={3}
         rowGap={6}
       >
-        {dummy.map((item, i) => {
+        {projects.map((proj) => {
           return (
-            <Box key={i}>
-              <Box
-                component="img"
-                src={
-                  "https://cdn.prod.website-files.com/63c96fbd3f3abb1db1cbcab9/6511becc5d4ae9d9c135d5c8_Sims%204%20Thumbnail-p-800.png"
-                }
-                sx={{
-                  width: "100%",
-                  borderRadius: "20px",
-                  mb: 1,
-                  transition: "all .3s",
-                  cursor: "pointer",
-                  "&:hover": {
-                    transform: "scale(.95)",
-                  },
-                }}
-              />
+            <Paper
+              key={proj.heading}
+              sx={{
+                transition: "all .3s",
+                "&:hover": { filter: "drop-shadow(0 0 16px pink)" },
+              }}
+            >
+              <Box sx={{ height: "270px", overflow: "hidden", mb: 3 }}>
+                <Box
+                  component="img"
+                  src={`/projects/${proj.image}.png`}
+                  sx={{
+                    minHeight: "270px",
+                    width: "100%",
+                    mb: 1,
+                    transition: "all .3s",
+                    cursor: "pointer",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                    },
+                  }}
+                />
+              </Box>
 
-              <Typography fontWeight="bold" variant="body2">
-                Customer UX & Game UI
-              </Typography>
-              <Typography fontStyle="italic" variant="h4">
-                Sims 4 Fan UI Redesign
-              </Typography>
-            </Box>
+              <Box px={2} py={3}>
+                <Typography fontWeight="bold" variant="body2">
+                  {proj.subHeading}
+                </Typography>
+                <Typography fontStyle="italic" variant="h4">
+                  {proj.heading}
+                </Typography>
+              </Box>
+            </Paper>
           );
         })}
       </Box>
@@ -57,3 +63,46 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+const projects = [
+  {
+    heading: "Leaderbored",
+    subHeading: "UI portal for HTML5 games",
+    image: "leaderbored1",
+  },
+  {
+    heading: "AYO 2023",
+    subHeading: "Event information and registration",
+    image: "ayo",
+  },
+  {
+    heading: "Taktyl Studios",
+    subHeading: "Company website",
+    image: "Taktyl",
+  },
+  {
+    heading: "JFC Universe",
+    subHeading: "A 3D web app that tells a story",
+    image: "jfc",
+  },
+  {
+    heading: "Blink Creative Studio",
+    subHeading: "Company website ",
+    image: "blink",
+  },
+  {
+    heading: "LapsFlix",
+    subHeading: "Personal project to help find a new movie/series",
+    image: "lapsflix1",
+  },
+  {
+    heading: "3D Tee-Hee",
+    subHeading: "Personal project to practice 3D web development",
+    image: "3dingdong1",
+  },
+  {
+    heading: "Jason Lapina-v1",
+    subHeading: "First version of my website",
+    image: "site-v1",
+  },
+];
