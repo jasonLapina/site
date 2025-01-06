@@ -11,7 +11,7 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 export default function Experience() {
   return (
     <Paper sx={{ px: 4, py: 8 }}>
-      <Typography variant="h2">My History</Typography>
+      <Typography variant="h2">My Work History</Typography>
 
       <Stack useFlexGap rowGap={2} mt={5}>
         <Typography>I&apos;ve been on some cool teams!</Typography>

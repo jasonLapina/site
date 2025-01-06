@@ -45,7 +45,7 @@ export default function About() {
         </Box>
       </Stack>
 
-      <Stack>
+      <Stack useFlexGap rowGap={10}>
         <Experience />
         <Others />
       </Stack>

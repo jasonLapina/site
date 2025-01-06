@@ -1,3 +1,23 @@
+import { Box, Paper, Stack, Typography } from "@mui/material";
+
 export default function Others() {
-  return <h1>Others</h1>;
+  return (
+    <Paper sx={{ px: 4, py: 8 }}>
+      <Stack useFlexGap rowGap={6}>
+        <Box>
+          <Typography variant="h2">Beyond the Code</Typography>
+          <Stack useFlexGap rowGap={2} mt={2}>
+            <Typography>
+              When I&apos;m not building new things or learning new things to
+              build new things (😆), I&apos;m mostly gaming, working-out, or
+              cooking! 👨‍🍳
+            </Typography>
+          </Stack>
+        </Box>
+        <Box>
+          <Typography variant="h5">My Mount Rushmore of Games</Typography>
+        </Box>
+      </Stack>
+    </Paper>
+  );
 }
