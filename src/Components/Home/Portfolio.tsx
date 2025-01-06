@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <Container>
       <Box>
-        <Typography variant="h1">PORTFOLIO</Typography>
+        <Typography variant="h1">Portfolio</Typography>
         <Typography variant="h4" mt={4}>
           Take a look at some of my work!
         </Typography>
