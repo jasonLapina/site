@@ -34,11 +34,20 @@ const Portfolio = () => {
                   width: "100%",
                   borderRadius: "20px",
                   mb: 1,
+                  transition: "all .3s",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "scale(.95)",
+                  },
                 }}
               />
 
-              <Typography variant="h6">Customer UX & Game UI</Typography>
-              <Typography variant="h4">Sims 4 Fan UI Redesign</Typography>
+              <Typography fontWeight="bold" variant="body2">
+                Customer UX & Game UI
+              </Typography>
+              <Typography fontStyle="italic" variant="h4">
+                Sims 4 Fan UI Redesign
+              </Typography>
             </Box>
           );
         })}

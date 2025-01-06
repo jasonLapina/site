@@ -12,6 +12,7 @@ import { LinkedIn } from "@mui/icons-material";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaWebflow } from "react-icons/fa6";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 const Hero = () => {
   return (
@@ -46,6 +47,11 @@ const TextBox = () => {
       text: "Webflow",
       icon: FaWebflow,
       color: "#1b74f6",
+    },
+    {
+      text: "Motion",
+      icon: TbBrandFramerMotion,
+      color: "#010101",
     },
   ];
 
