@@ -23,8 +23,13 @@ const Portfolio = () => {
         {projects.map((proj) => {
           return (
             <Paper
+              component="a"
+              href={proj.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={proj.heading}
               sx={{
+                textDecoration: "none",
                 transition: "all .3s",
                 "&:hover": { filter: "drop-shadow(0 0 16px pink)" },
               }}
@@ -69,40 +74,48 @@ const projects = [
     heading: "Leaderbored",
     subHeading: "UI portal for HTML5 games",
     image: "leaderbored1",
+    link: "https://leaderbored.gg/",
   },
   {
     heading: "AYO 2023",
     subHeading: "Event information and registration",
     image: "ayo",
+    link: "https://www.sikapphilippines.org/ayo2023",
   },
   {
     heading: "Taktyl Studios",
     subHeading: "Company website",
     image: "Taktyl",
+    link: "https://taktylstudios.com/",
   },
   {
     heading: "JFC Universe",
     subHeading: "A 3D web app that tells a story",
     image: "jfc",
+    link: "https://milestones-worlds.jollibeegroup.com/",
   },
   {
     heading: "Blink Creative Studio",
     subHeading: "Company website ",
     image: "blink",
+    link: "https://www.blinkcreativestudio.com/",
   },
   {
     heading: "LapsFlix",
     subHeading: "Personal project to help find a new movie/series",
     image: "lapsflix1",
+    link: "https://lapsflix-v3.vercel.app/",
   },
   {
     heading: "3D Tee-Hee",
     subHeading: "Personal project to practice 3D web development",
     image: "3dingdong1",
+    link: "https://3ding-dong.vercel.app/",
   },
   {
     heading: "Jason Lapina-v1",
     subHeading: "First version of my website",
+    link: "https://jasondev-nine.vercel.app/",
     image: "site-v1",
   },
 ];
