@@ -54,21 +54,32 @@ const Navbar = () => {
           </Avatar>
         </Link>
 
-        <Stack flexDirection="row" alignItems="center" useFlexGap columnGap={2}>
+        <Stack
+          flexDirection="row"
+          alignItems="center"
+          useFlexGap
+          columnGap={2}
+          sx={{
+            px: 4,
+            py: 2,
+            borderRadius: "32px",
+            backgroundColor: "rgba(255,255,255,.4)",
+            backdropFilter: "blur(8px)",
+            transition: "all .4s",
+          }}
+        >
           {navItems.map((nav) => {
             const isActive = path === nav.link;
             return (
               <Button
-                variant="outlined"
+                variant="text"
                 key={nav.text}
                 href={nav.link}
                 component={NextLink}
                 sx={{
                   textTransform: "initial",
-                  borderWidth: 3,
-                  borderColor: "primary.light",
-                  backgroundColor: isActive ? "primary.light" : "white",
-                  color: !isActive ? "primary.light" : "white",
+                  fontWeight: "bold",
+                  color: isActive ? "primary.dark" : "primary.light",
                 }}
               >
                 {nav.text}
@@ -76,11 +87,12 @@ const Navbar = () => {
             );
           })}
           <Button
-            variant="outlined"
+            variant="text"
             sx={{
               textTransform: "initial",
-              backgroundColor: "white",
               borderWidth: 3,
+              fontWeight: "bold",
+              color: "primary.light",
             }}
             endIcon={<LinkedIn />}
             href="https://www.linkedin.com/in/dev-jason/"
