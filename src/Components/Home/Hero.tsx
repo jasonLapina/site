@@ -16,18 +16,24 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 
 const Hero = () => {
   return (
-    <Container
+    <Box
       sx={{
-        display: "grid",
-        gridTemplateColumns: "1fr .6fr",
-        columnGap: 10,
-        alignItems: "center",
-        height: "100vh",
+        background: "linear-gradient(to right, white 70%, pink 30%)",
       }}
     >
-      <TextBox />
-      <ImageBox />
-    </Container>
+      <Container
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "1fr .6fr",
+          columnGap: 10,
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <TextBox />
+        <ImageBox />
+      </Container>
+    </Box>
   );
 };
 
@@ -104,6 +110,7 @@ const TextBox = () => {
 const ImageBox = () => {
   return (
     <Paper
+      elevation={0}
       sx={{
         borderRadius: "20px",
         p: 2,
