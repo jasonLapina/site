@@ -1,4 +1,5 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
+import Games from "@/app/about/Games";
 
 export default function Others() {
   return (
@@ -14,9 +15,7 @@ export default function Others() {
             </Typography>
           </Stack>
         </Box>
-        <Box>
-          <Typography variant="h5">My Mount Rushmore of Games</Typography>
-        </Box>
+        <Games />
       </Stack>
     </Paper>
   );
