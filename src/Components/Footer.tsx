@@ -10,7 +10,7 @@ import { Email, LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
   return (
-    <Container sx={{ mt: 10 }}>
+    <Container sx={{ mt: 20 }}>
       <Paper
         sx={{
           borderRadius: "20px",
