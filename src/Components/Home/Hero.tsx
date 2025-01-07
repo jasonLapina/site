@@ -126,9 +126,9 @@ const ImageBox = () => {
           src="/Laps_artwork1.jpg"
         />
         <Stack sx={{ textAlign: "center", mt: 3 }} useFlexGap rowGap={1}>
-          <Typography variant="h6"> Jason Lapina </Typography>
-          <Typography variant="h5"> Web Developer </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography variant="h5"> Jason Lapina </Typography>
+          <Typography variant="h6"> Web Developer </Typography>
+          <Typography variant="caption" color="textSecondary">
             &quot;I do what I do for the love of it&quot;
           </Typography>
         </Stack>
