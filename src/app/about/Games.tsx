@@ -19,7 +19,7 @@ const Games = () => {
       title: "Dota 2",
       rating: 4.5,
       image: "dota.jpg",
-      text: "With more than 4k hours (excluding the original Dota), this is my favorite game of all time! The intense strategy and epic battles in Dota 2 make every match unforgettable.",
+      text: "With more than 4k hours (excluding the original Dota), this has been my favorite game for the longest period of time! The intense strategy and epic battles in Dota 2 make every match unforgettable.",
       release: "July 9, 2013",
       avatar: "avatar-dota.jpg",
       link: "",

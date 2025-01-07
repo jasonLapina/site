@@ -1,3 +1,5 @@
+import Loading from "@/app/loading";
+
 export default function Blog() {
-  return <h1>Blog</h1>;
+  return <Loading />;
 }
