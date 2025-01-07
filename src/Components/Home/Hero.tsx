@@ -90,7 +90,7 @@ const TextBox = () => {
             return (
               <Box key={item.text}>
                 <Tooltip arrow title={item.text}>
-                  <Icon fontSize="64px" color={item.color} />
+                  <Icon fontSize="40px" color={item.color} />
                 </Tooltip>
               </Box>
             );
