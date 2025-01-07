@@ -9,8 +9,8 @@ const Portfolio = () => {
           Take a look at some of my work!
         </Typography>
         <Typography mt={2} maxWidth="400px">
-          Explore experiences crafted with precision and passion, aimed at
-          delivering seamless experiences that are always fun and effective.
+          Each project highlights my skills, creativity, and dedication to
+          delivering exceptional results.
         </Typography>
       </Box>
       <Box
