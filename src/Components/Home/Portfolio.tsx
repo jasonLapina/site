@@ -52,10 +52,8 @@ const Portfolio = () => {
               </Box>
 
               <Box px={2} py={3}>
-                <Typography fontWeight="bold" variant="body2">
-                  {proj.subHeading}
-                </Typography>
-                <Typography fontStyle="italic" variant="h4">
+                <Typography variant="body2">{proj.subHeading}</Typography>
+                <Typography fontWeight="bold" variant="h4">
                   {proj.heading}
                 </Typography>
               </Box>
