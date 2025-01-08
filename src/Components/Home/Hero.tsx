@@ -108,7 +108,7 @@ const TextBox = () => {
           useFlexGap
           flexDirection="row"
           columnGap={2}
-          justifyContent="center"
+          justifyContent={{ xs: "center", sm: "start" }}
         >
           {specializations.map((item) => {
             const Icon = item.icon;
