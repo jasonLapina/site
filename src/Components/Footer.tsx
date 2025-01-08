@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Button,
@@ -5,10 +7,13 @@ import {
   Paper,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import { Email, LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
+  const matches = useMediaQuery("(max-width:779px)");
+
   return (
     <Container sx={{ mt: 20 }}>
       <Paper
@@ -57,17 +62,26 @@ const Footer = () => {
           </Button>
         </Stack>
 
-        <Box
-          component="img"
-          src="/calling.svg"
-          sx={{
-            position: "absolute",
-            top: "0",
-            right: "-320px",
-          }}
-        />
+        {!matches && (
+          <Box
+            component="img"
+            src="/calling.svg"
+            sx={{
+              position: "absolute",
+              top: "0",
+              right: "-320px",
+            }}
+          />
+        )}
       </Paper>
-      <Box mt={4} display="grid" gridTemplateColumns=".6fr 1fr" columnGap={5}>
+      <Box
+        mt={4}
+        display={{ sm: "grid", xs: "flex" }}
+        gridTemplateColumns=".6fr 1fr"
+        columnGap={5}
+        flexDirection="column-reverse"
+        rowGap={2}
+      >
         <Paper
           sx={{
             borderRadius: "20px",

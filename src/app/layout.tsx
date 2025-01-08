@@ -22,7 +22,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <CssBaseline />
           <ThemeProvider>
-            <Box pb={10}>
+            <Box pb={12}>
               <Navbar />
               {children}
               <Footer />
