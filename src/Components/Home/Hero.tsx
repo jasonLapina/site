@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Link,
-  Paper,
   Stack,
   Tooltip,
   Typography,
@@ -13,25 +12,30 @@ import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaWebflow } from "react-icons/fa6";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import HeroImage from "@/Components/Home/HeroImage";
 
 const Hero = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to right, white 70%, pink 30%)",
+        background: {
+          sm: "linear-gradient(to right, white 70%, pink 30%)",
+        },
       }}
     >
       <Container
         sx={{
           display: "grid",
-          gridTemplateColumns: "1fr .6fr",
+          gridTemplateColumns: { sm: "1fr .6fr" },
           columnGap: 10,
           alignItems: "center",
-          height: "100vh",
+          height: { sm: "100vh", xs: "90vh" },
+          justifyContent: "center",
+          pt: { xs: 10, sm: 5 },
         }}
       >
         <TextBox />
-        <ImageBox />
+        <HeroImage />
       </Container>
     </Box>
   );
@@ -62,9 +66,18 @@ const TextBox = () => {
   ];
 
   return (
-    <Box>
+    <Box
+      sx={{
+        textAlign: { xs: "center", sm: "left" },
+      }}
+    >
       <Typography variant="h2">Hi, I&apos;m Jason!</Typography>
-      <Stack useFlexGap rowGap={2} mt={3}>
+      <Stack
+        useFlexGap
+        rowGap={2}
+        mt={3}
+        alignItems={{ xs: "center", sm: "start" }}
+      >
         <Typography>
           I&apos;m a <strong>full-stack developer</strong> that&apos;s ready to
           help you bring your ideas to life!
@@ -90,7 +103,13 @@ const TextBox = () => {
       </Button>
       <Box mt={4}>
         <Typography variant="h5">Specializations:</Typography>
-        <Stack mt={2} useFlexGap flexDirection="row" columnGap={2}>
+        <Stack
+          mt={2}
+          useFlexGap
+          flexDirection="row"
+          columnGap={2}
+          justifyContent="center"
+        >
           {specializations.map((item) => {
             const Icon = item.icon;
             return (
@@ -104,36 +123,6 @@ const TextBox = () => {
         </Stack>
       </Box>
     </Box>
-  );
-};
-
-const ImageBox = () => {
-  return (
-    <Paper
-      elevation={0}
-      sx={{
-        borderRadius: "20px",
-        p: 2,
-      }}
-    >
-      <Stack alignItems="center" height="100%">
-        <Box
-          sx={{
-            borderRadius: "20px",
-          }}
-          width="100%"
-          component="img"
-          src="/Laps_artwork1.jpg"
-        />
-        <Stack sx={{ textAlign: "center", mt: 3 }} useFlexGap rowGap={1}>
-          <Typography variant="h5"> Jason Lapina </Typography>
-          <Typography variant="h6"> Web Developer </Typography>
-          <Typography variant="caption" color="textSecondary">
-            &quot;I do what I do for the love of it&quot;
-          </Typography>
-        </Stack>
-      </Stack>
-    </Paper>
   );
 };
 
