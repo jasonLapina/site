@@ -39,6 +39,7 @@ const navItems = [
 const Navbar = () => {
   const path = usePathname();
   const isMobile = useMediaQuery("(max-width:600px)");
+
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = (open: boolean) => {
@@ -73,6 +74,8 @@ const Navbar = () => {
               "&:hover": {
                 filter: "drop-shadow(0 0 2mm crimson)",
               },
+              backgroundColor: "rgba(255,255,255,.4)",
+              backdropFilter: "blur(8px)",
             }}
           >
             JL
