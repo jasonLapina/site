@@ -15,7 +15,9 @@ const Portfolio = () => {
       </Box>
       <Box
         display="grid"
-        gridTemplateColumns="1fr 1fr"
+        sx={{
+          gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+        }}
         mt={6}
         columnGap={3}
         rowGap={6}
