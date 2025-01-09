@@ -9,7 +9,7 @@ export default function Others() {
         <Box>
           <Typography variant="h2">Beyond the Code</Typography>
           <Stack useFlexGap rowGap={2} mt={2}>
-            <Typography>
+            <Typography variant="body2">
               When I&apos;m not building new things or learning new things to
               build new things (😆), <br /> I&apos;m mostly gaming, working-out,
               cooking or doom-scrolling on social media. Checkout a few of my
