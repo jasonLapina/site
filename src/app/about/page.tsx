@@ -10,7 +10,7 @@ export default function About() {
         justifyContent="center"
         useFlexGap
         rowGap={4}
-        mt={10}
+        mt={{ sm: 10, xs: 2 }}
         py={10}
       >
         <Box
@@ -27,16 +27,15 @@ export default function About() {
             sx={{
               height: "240px",
               width: "240px",
-              bgcolor: "white",
             }}
           >
             JL
           </Avatar>
         </Box>
 
-        <Box px={8} textAlign="center">
+        <Box px={{ md: 8, sm: 1 }} textAlign="center">
           <Typography variant="h3">Hi, I&apos;m Jason! :)</Typography>
-          <Typography variant="h5" mt={2} px={4}>
+          <Typography variant="h5" mt={2} px={{ sm: 4, xs: 1 }}>
             A web developer with 2+ years of experience building products in
             web-based game development, marketing, and enterprise software.
             Skilled in creating scalable solutions and collaborating with
