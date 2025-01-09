@@ -1,6 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
 import Games from "@/app/about/Games";
-import HealthAndFitness from "@/app/about/HealthAndFitness";
 
 export default function Others() {
   return (
@@ -18,7 +17,7 @@ export default function Others() {
           </Stack>
         </Box>
         <Games />
-        <HealthAndFitness />
+        {/*<HealthAndFitness />*/}
       </Stack>
     </>
   );

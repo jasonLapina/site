@@ -57,7 +57,7 @@ const Games = () => {
     <Box>
       <Box sx={{ px: 2, py: 5, backgroundColor: "black", color: "white" }}>
         <Typography variant="h5">My Mount Rushmore of Games</Typography>
-        <Typography variant="body2" mt={2}>
+        <Typography mt={2}>
           I played plenty of online multiplayer games in high school, but over
           time, I’ve come to appreciate the pure joy of single-player games.
         </Typography>

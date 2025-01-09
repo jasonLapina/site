@@ -2,7 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Paper,
+  Box,
   Stack,
   Typography,
 } from "@mui/material";
@@ -10,26 +10,34 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 
 export default function Experience() {
   return (
-    <Paper sx={{ px: 4, py: 8 }}>
-      <Typography variant="h2">My Work History</Typography>
+    <Box>
+      <Typography variant="h2" mt={8}>
+        My Coding Journey
+      </Typography>
+      <Typography variant="body2" mt={2}>
+        My programming journey began with a leap of faith.
+        <br /> It’s been challenging yet rewarding, and I wouldn’t hesitate to
+        do it all over again!
+      </Typography>
 
-      <Stack useFlexGap rowGap={2} mt={5}>
-        <Typography variant="body2">
-          I&apos;ve been on some cool teams!
-        </Typography>
-        <Typography variant="body2">
-          I’m an experience designer, but I’m sure you know that by now! I’ve
-          been working as a designer for over 4 years at tons of places now and
-          have touched so many products and teams.
-        </Typography>
-        <Typography variant="body2">
-          My 20+ year passion for games bled into my career and I’ve been happy
-          to help create amazing experiences for a bunch of different clients
-          over the years.
-        </Typography>
-      </Stack>
+      <Box
+        sx={{ px: 2, py: 5, backgroundColor: "black", color: "white", mt: 6 }}
+      >
+        <Typography variant="h5">My Work History</Typography>
 
-      <Stack mt={5} useFlexGap rowGap={3}>
+        <Typography mt={2}>
+          I&apos;ve had the opportunity to work with some amazing teams.
+          <br /> I began my career at a company specializing in gamified web
+          applications, which was an exciting and rewarding introduction to the
+          industry.
+          <br />
+          Today, I contribute to a leading tech company, developing features and
+          resolving issues for enterprise-level software designed for
+          large-scale businesses
+        </Typography>
+      </Box>
+
+      <Stack useFlexGap rowGap={3} mt={5}>
         {workHistory.map((work) => {
           const { company, date, description, position } = work;
 
@@ -67,7 +75,7 @@ export default function Experience() {
           );
         })}
       </Stack>
-    </Paper>
+    </Box>
   );
 }
 
