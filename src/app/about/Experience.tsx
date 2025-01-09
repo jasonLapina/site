@@ -14,13 +14,15 @@ export default function Experience() {
       <Typography variant="h2">My Work History</Typography>
 
       <Stack useFlexGap rowGap={2} mt={5}>
-        <Typography>I&apos;ve been on some cool teams!</Typography>
-        <Typography>
+        <Typography variant="body2">
+          I&apos;ve been on some cool teams!
+        </Typography>
+        <Typography variant="body2">
           I’m an experience designer, but I’m sure you know that by now! I’ve
           been working as a designer for over 4 years at tons of places now and
           have touched so many products and teams.
         </Typography>
-        <Typography>
+        <Typography variant="body2">
           My 20+ year passion for games bled into my career and I’ve been happy
           to help create amazing experiences for a bunch of different clients
           over the years.
@@ -41,7 +43,7 @@ export default function Experience() {
             >
               <AccordionSummary expandIcon={<ExpandMoreRounded />}>
                 <Stack
-                  flexDirection="row"
+                  flexDirection={{ md: "row", xs: "column" }}
                   justifyContent="space-between"
                   width="100%"
                   alignItems="center"
