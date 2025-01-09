@@ -29,7 +29,7 @@ const Footer = () => {
       >
         <Typography
           variant="h2"
-          fontSize="6rem"
+          fontSize={{ xs: "5rem", sm: "6rem" }}
           fontWeight="bold"
           fontStyle="italic"
         >
