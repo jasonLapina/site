@@ -8,6 +8,8 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 const HeroImage = () => {
   const theme = useTheme();
@@ -22,16 +24,23 @@ const HeroImage = () => {
         borderRadius: "20px",
         p: 2,
       }}
+      component={motion.div}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ type: "spring" }}
     >
       <Stack alignItems="center" height="100%">
         <Box
           sx={{
             borderRadius: "20px",
+            width: { md: "100%", xs: "200px" },
+            height: "370px",
+            position: "relative",
+            overflow: "hidden",
           }}
-          width={{ md: "100%", xs: "200px" }}
-          component="img"
-          src="/Laps_artwork1.jpg"
-        />
+        >
+          <Image src="/Laps_artwork1.jpg" alt={"Jason Lapina"} fill={true} />
+        </Box>
         <Stack sx={{ textAlign: "center", mt: 3 }} useFlexGap rowGap={1}>
           <Typography variant="h5"> Jason Lapina </Typography>
           <Typography variant="h6"> Web Developer </Typography>
