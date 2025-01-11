@@ -38,13 +38,13 @@ export default function Specializations() {
         mt={2}
         useFlexGap
         flexDirection="row"
-        columnGap={2}
+        columnGap={1}
         justifyContent={{ xs: "center", sm: "start" }}
       >
         {specializations.map((item) => {
           const Icon = item.icon;
           return (
-            <motion.div key={item.text}>
+            <motion.div key={item.text} whileHover={{ scale: 1.2 }}>
               <Box>
                 <Tooltip arrow title={item.text}>
                   <Icon fontSize="40px" color={item.color} />
