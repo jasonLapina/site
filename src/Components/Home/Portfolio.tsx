@@ -1,4 +1,5 @@
 import { Box, Container, Paper, Typography } from "@mui/material";
+import Image from "next/image";
 
 const Portfolio = () => {
   return (
@@ -36,9 +37,18 @@ const Portfolio = () => {
                 "&:hover": { filter: "drop-shadow(0 0 16px pink)" },
               }}
             >
-              <Box sx={{ height: "270px", overflow: "hidden", mb: 3 }}>
+              <Box
+                sx={{
+                  height: "270px",
+                  overflow: "hidden",
+                  mb: 3,
+                  position: "relative",
+                }}
+              >
                 <Box
-                  component="img"
+                  alt={`${proj.heading}: by Jason Lapina`}
+                  component={Image}
+                  fill
                   src={`/projects/${proj.image}.png`}
                   sx={{
                     minHeight: "270px",
