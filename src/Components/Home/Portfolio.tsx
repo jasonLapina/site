@@ -128,4 +128,10 @@ const projects = [
     link: "https://jasondev-nine.vercel.app/",
     image: "site-v1",
   },
+  {
+    heading: "Jelanie Gapas",
+    subHeading: "My girl's website",
+    link: "https://www.jelaniegapas.com/",
+    image: "jelanie",
+  },
 ];
