@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Stack, Tooltip, Typography } from "@mui/material";
 import { motion } from "motion/react";
 import { FaReact } from "react-icons/fa";
@@ -44,8 +46,9 @@ export default function Specializations() {
           return (
             <motion.div
               key={item.text}
-              animate={{ scale: [0, 1.5, 1] }}
+              animate={{ scale: 1 }}
               initial={{ scale: 0 }}
+              transition={{ type: "spring" }}
             >
               <Box>
                 <Tooltip arrow title={item.text}>

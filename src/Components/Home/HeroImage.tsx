@@ -25,9 +25,8 @@ const HeroImage = () => {
         p: 2,
       }}
       component={motion.div}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ type: "spring" }}
+      initial={{ scale: 0.5, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
     >
       <Stack alignItems="center" height="100%">
         <Box
