@@ -102,6 +102,7 @@ const ActualNavBar = () => {
               textTransform: "initial",
               fontWeight: "bold",
               color: isActive ? "primary.dark" : "primary.light",
+              scale: isActive ? 1.2 : 1,
             }}
           >
             {nav.text}
