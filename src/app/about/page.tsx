@@ -12,7 +12,8 @@ export default function About() {
         useFlexGap
         rowGap={4}
         mt={{ sm: 10, xs: 2 }}
-        py={10}
+        py={5}
+        minHeight="70vh"
       >
         <AboutHero />
 

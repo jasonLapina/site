@@ -11,8 +11,8 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 export default function Experience() {
   return (
     <Box>
-      <Typography variant="h2" mt={8}>
-        My Coding Journey
+      <Typography variant="h2" mt={10}>
+        Journey & Work Ethic
       </Typography>
       <Typography variant="body2" mt={2}>
         My programming journey began with a leap of faith.
