@@ -1,6 +1,7 @@
-import { Avatar, Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import Experience from "@/app/about/Experience";
 import Others from "@/app/about/Others";
+import AboutHero from "@/app/about/AboutHero";
 
 export default function About() {
   return (
@@ -13,25 +14,7 @@ export default function About() {
         mt={{ sm: 10, xs: 2 }}
         py={10}
       >
-        <Box
-          sx={{
-            display: "inline-block",
-            borderRadius: "50%",
-            p: "4px",
-            background:
-              "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)",
-          }}
-        >
-          <Avatar
-            src={"/me-1.jpg"}
-            sx={{
-              height: "240px",
-              width: "240px",
-            }}
-          >
-            JL
-          </Avatar>
-        </Box>
+        <AboutHero />
 
         <Box px={{ md: 8, sm: 1 }} textAlign="center">
           <Typography variant="h3">Hi, I&apos;m Jason! :)</Typography>
