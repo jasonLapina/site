@@ -44,12 +44,7 @@ export default function Specializations() {
         {specializations.map((item) => {
           const Icon = item.icon;
           return (
-            <motion.div
-              key={item.text}
-              animate={{ scale: 1 }}
-              initial={{ scale: 0 }}
-              transition={{ type: "spring" }}
-            >
+            <motion.div key={item.text}>
               <Box>
                 <Tooltip arrow title={item.text}>
                   <Icon fontSize="40px" color={item.color} />
