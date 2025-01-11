@@ -31,10 +31,32 @@ export default function Specializations() {
     },
   ];
 
+  // Parent animation settings (staggerChildren is key for staggered animation)
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Time between each item's animation
+      },
+    },
+  };
+
+  // Child animation settings (for each icon)
+  const childVariants = {
+    hidden: { opacity: 0, y: 50 }, // Starts offscreen
+    visible: { opacity: 1, y: 0 }, // Slides into view
+  };
+
   return (
     <Box mt={4}>
       <Typography variant="h5">Specializations:</Typography>
+      {/* Apply parent animation */}
       <Stack
+        component={motion.div}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
         mt={2}
         useFlexGap
         flexDirection="row"
@@ -44,7 +66,12 @@ export default function Specializations() {
         {specializations.map((item) => {
           const Icon = item.icon;
           return (
-            <motion.div key={item.text} whileHover={{ scale: 1.2 }}>
+            // Apply child animation
+            <motion.div
+              key={item.text}
+              variants={childVariants} // Each child uses this for entry animation
+              whileHover={{ scale: 1.2 }} // Scale on hover
+            >
               <Box>
                 <Tooltip arrow title={item.text}>
                   <Icon fontSize="40px" color={item.color} />
