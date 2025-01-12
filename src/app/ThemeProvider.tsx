@@ -4,7 +4,6 @@ import {
   createTheme,
   ThemeProvider as MuiProvider,
 } from "@mui/material/styles";
-import { pink } from "@mui/material/colors";
 import { css, Global } from "@emotion/react";
 
 const globalStyles = css`
@@ -25,7 +24,12 @@ const theme = createTheme({
     },
   },
   palette: {
-    primary: pink,
+    primary: {
+      main: "#FF1493",
+      dark: "#C01173",
+      light: "#FF6EB4",
+      contrastText: "#fff",
+    },
     secondary: {
       main: "#010101",
     },
