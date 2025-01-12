@@ -8,13 +8,19 @@ export default function HeroCTA() {
   return (
     <Button
       component={motion.a}
-      sx={{ mt: 5, position: "relative", overflow: "hidden" }}
+      sx={{
+        mt: 5,
+        position: "relative",
+        overflow: "hidden",
+        "&:hover": {
+          scale: 1.05,
+        },
+      }}
       variant="contained"
       endIcon={<LinkedIn />}
       href="https://www.linkedin.com/in/dev-jason/"
       target="_blank"
       rel="noreferrer noopener"
-      whileHover={{ scale: 1.1 }}
     >
       Let&apos;s Connect
     </Button>

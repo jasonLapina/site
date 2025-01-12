@@ -66,7 +66,11 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
             component={motion.a}
-            whileHover={{ scale: 1.1 }}
+            sx={{
+              "&:hover": {
+                scale: 1.05,
+              },
+            }}
           >
             Let&apos;s Connect
           </Button>
@@ -75,7 +79,11 @@ const Footer = () => {
             endIcon={<Email />}
             href="mailto:lapina.jason@gmail.com"
             component={motion.a}
-            whileHover={{ scale: 1.1 }}
+            sx={{
+              "&:hover": {
+                scale: 1.05,
+              },
+            }}
           >
             Email
           </Button>
