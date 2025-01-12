@@ -34,7 +34,7 @@ const Portfolio = () => {
               sx={{
                 textDecoration: "none",
                 transition: "all .3s",
-                "&:hover": { filter: "drop-shadow(0 0 16px pink)" },
+                "&:hover": { filter: "drop-shadow(0 0 8px deeppink)" },
               }}
             >
               <Box
