@@ -17,7 +17,7 @@ const Footer = () => {
   const matches = useMediaQuery("(max-width:779px)");
 
   const ref = useRef(null);
-  const inView = useInView(ref, { amount: 0.7 });
+  const inView = useInView(ref, { amount: 1, once: true });
 
   return (
     <Container sx={{ mt: 20 }}>
@@ -117,6 +117,11 @@ const Footer = () => {
             alignItems="center"
             useFlexGap
             columnGap={2}
+            sx={{
+              transition: "all .4s",
+              transform: !inView ? "translateX(-100px)" : "translateX()",
+              opacity: !inView ? 0 : 1,
+            }}
           >
             <Box component="img" src="/logo.png" sx={{ width: "80px" }} />
             <Typography>Made in Next.js | 2025</Typography>
@@ -129,6 +134,9 @@ const Footer = () => {
             textAlign: "right",
             backgroundColor: "secondary.main",
             color: "white",
+            transition: "all .4s",
+            transform: !inView ? "translateX(100px)" : "translateX()",
+            opacity: !inView ? 0 : 1,
           }}
         >
           <Typography variant="subtitle1">
