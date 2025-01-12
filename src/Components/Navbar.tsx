@@ -83,13 +83,12 @@ const ActualNavBar = () => {
       flexDirection="row"
       alignItems="center"
       useFlexGap
-      columnGap={2}
+      columnGap={3}
       sx={{
         px: 4,
         py: 2,
         borderRadius: "32px",
-        backgroundColor: "rgba(255,255,255,.4)",
-        backdropFilter: "blur(8px)",
+        backgroundColor: "black",
         transition: "all .4s",
       }}
     >
@@ -104,7 +103,7 @@ const ActualNavBar = () => {
             sx={{
               textTransform: "initial",
               fontWeight: "bold",
-              color: isActive ? "primary.dark" : "primary.light",
+              color: isActive ? "white" : "primary.light",
               scale: isActive ? 1.2 : 1,
               position: "relative",
             }}
@@ -131,7 +130,11 @@ const ActualNavBar = () => {
           textTransform: "initial",
           borderWidth: 3,
           fontWeight: "bold",
-          color: "primary.light",
+          color: "white",
+          backgroundColor: "primary.main",
+          px: 2,
+          py: 1,
+          borderRadius: "16px",
         }}
         endIcon={<LinkedIn />}
         href="https://www.linkedin.com/in/dev-jason/"
