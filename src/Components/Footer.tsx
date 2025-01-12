@@ -10,13 +10,19 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { Email, LinkedIn } from "@mui/icons-material";
+import { useRef } from "react";
+import { useInView } from "motion/react";
 
 const Footer = () => {
   const matches = useMediaQuery("(max-width:779px)");
 
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: 0.7 });
+
   return (
     <Container sx={{ mt: 20 }}>
       <Paper
+        ref={ref}
         sx={{
           borderRadius: "20px",
           py: 10,
@@ -32,6 +38,12 @@ const Footer = () => {
           fontSize={{ xs: "5rem", sm: "6rem" }}
           fontWeight="bold"
           fontStyle="italic"
+          sx={{
+            transition: "all .4s",
+            transformOrigin: "left",
+            transform: !inView ? "rotate(-20deg)" : "rotate(0)",
+            opacity: !inView ? 0 : 1,
+          }}
         >
           Let&apos;s talk!
         </Typography>
@@ -41,6 +53,11 @@ const Footer = () => {
           mt={3}
           flexDirection="row"
           alignItems="center"
+          sx={{
+            transition: "all .4s",
+            transform: !inView ? "translateY(100px)" : "translateY()",
+            opacity: !inView ? 0 : 1,
+          }}
         >
           <Button
             variant="contained"
@@ -70,6 +87,11 @@ const Footer = () => {
               position: "absolute",
               top: "0",
               right: "-320px",
+              transform: !inView ? "translateX(100px)" : "translateX(0)",
+              transition: "all .4s ",
+              opacity: !inView ? 0 : 1,
+              filter: (theme) =>
+                `drop-shadow(10px 10px ${theme.palette.primary.light})`,
             }}
           />
         )}
