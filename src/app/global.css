@@ -1,0 +1,22 @@
+/* Scrollbar track */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: none; /* Color of the track */
+
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: deeppink; /* Color of the scroll thumb */
+    /*border-radius: 10px; !* Rounder corners *!*/
+    /*border: 3px solid #f1f1f1; !* Adds spacing around the thumb *!*/
+}
+
+/* Hover state for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color when hovered */
+}

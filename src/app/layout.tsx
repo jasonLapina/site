@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Box, CssBaseline } from "@mui/material";
+import "./global.css";
 
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
