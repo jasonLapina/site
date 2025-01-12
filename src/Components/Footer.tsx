@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Email, LinkedIn } from "@mui/icons-material";
 import { useRef } from "react";
-import { useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 
 const Footer = () => {
   const matches = useMediaQuery("(max-width:779px)");
@@ -65,7 +65,8 @@ const Footer = () => {
             href="https://www.linkedin.com/in/dev-jason/"
             target="_blank"
             rel="noreferrer noopener"
-            component="a"
+            component={motion.a}
+            whileHover={{ scale: 1.1 }}
           >
             Let&apos;s Connect
           </Button>
@@ -73,7 +74,8 @@ const Footer = () => {
             variant="contained"
             endIcon={<Email />}
             href="mailto:lapina.jason@gmail.com"
-            component="a"
+            component={motion.a}
+            whileHover={{ scale: 1.1 }}
           >
             Email
           </Button>

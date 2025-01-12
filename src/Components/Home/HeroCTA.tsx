@@ -14,6 +14,7 @@ export default function HeroCTA() {
       href="https://www.linkedin.com/in/dev-jason/"
       target="_blank"
       rel="noreferrer noopener"
+      whileHover={{ scale: 1.1 }}
     >
       Let&apos;s Connect
     </Button>
