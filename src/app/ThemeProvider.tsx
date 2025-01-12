@@ -5,6 +5,14 @@ import {
   ThemeProvider as MuiProvider,
 } from "@mui/material/styles";
 import { pink } from "@mui/material/colors";
+import { css, Global } from "@emotion/react";
+
+const globalStyles = css`
+  ::selection {
+    background-color: #ffcc00;
+    color: #000;
+  }
+`;
 
 const theme = createTheme({
   components: {
@@ -39,7 +47,12 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  return <MuiProvider theme={theme}>{children}</MuiProvider>;
+  return (
+    <>
+      <Global styles={globalStyles} />
+      <MuiProvider theme={theme}>{children}</MuiProvider>
+    </>
+  );
 }
 
 function generateHeadingStyles() {
@@ -50,6 +63,10 @@ function generateHeadingStyles() {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     fontFamily: '"Trebuchet MS", Helvetica, sans-serif',
+    "&::selection": {
+      background: "#ffcc00",
+      WebkitTextFillColor: "black",
+    },
   };
 }
 
