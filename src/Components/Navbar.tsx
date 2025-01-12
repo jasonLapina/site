@@ -2,6 +2,7 @@
 
 import {
   Avatar,
+  Box,
   Button,
   Container,
   Link,
@@ -11,6 +12,7 @@ import {
 import NextLink from "next/link";
 import { LinkedIn } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 
 const navItems = [
   {
@@ -39,6 +41,7 @@ const Navbar = () => {
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 99,
+        transition: "all .4s",
       }}
     >
       <Stack
@@ -103,9 +106,22 @@ const ActualNavBar = () => {
               fontWeight: "bold",
               color: isActive ? "primary.dark" : "primary.light",
               scale: isActive ? 1.2 : 1,
+              position: "relative",
             }}
           >
             {nav.text}
+            <Box
+              component={motion.div}
+              sx={{
+                position: "absolute",
+                height: "2px",
+                width: "90%",
+                background: (theme) => theme.palette.primary.dark,
+                transition: "all .3s",
+                transform: !isActive ? "scaleX(0)" : "scaleX(1)",
+                bottom: 6,
+              }}
+            />
           </Button>
         );
       })}
